@@ -1,0 +1,8 @@
+spring:
+  profiles:
+    active: ${SPRING_PROFILES_ACTIVE:dev}
+  application:
+    name: parking-lot-order-service
+  cloud:
+      config:
+        uri: http://${CONFIG_SERVER:192.168.1.221}:${CONFIG_SERVER_PORT:8888}

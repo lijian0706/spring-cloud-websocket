@@ -1,0 +1,29 @@
+spring.application.name: gateway
+
+server:
+  port: 7000
+  compression:
+    enabled: true
+    mime-types: text/html,text/css,application/javascript,application/json
+#spring.resources.static-locations: classpath:/resources/static
+
+spring:
+  cloud:
+    gateway:
+      routes:
+      - id: web-socket
+        uri: lb://web-socket
+        predicates:
+        - Path=/web-socket/**
+        filters:
+        - RewritePath=/web-socket/(?<path>.*), /$\{path}
+          # SockJS route
+      - id: websocket_sockjs_route
+        uri: lb://web-socket
+        predicates:
+          - Path=/web-socket/info/**
+        # Normwal Websocket route
+      - id: websocket_route
+        uri: lb:ws://web-socket
+        predicates:
+          - Path=/web-socket/**
