@@ -52,16 +52,18 @@
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/io.netty/netty-all -->
 		<dependency>
-			<groupId>io.netty</groupId>
-			<artifactId>netty-all</artifactId>
-			<version>4.1.36.Final</version>
+		    <groupId>io.netty</groupId>
+		    <artifactId>netty-all</artifactId>
+		    <version>4.1.42.Final</version>
 		</dependency>
+
 		<!-- https://mvnrepository.com/artifact/io.projectreactor.netty/reactor-netty -->
 		<dependency>
-			<groupId>io.projectreactor.netty</groupId>
-			<artifactId>reactor-netty</artifactId>
-			<version>0.8.8.RELEASE</version>
+		    <groupId>io.projectreactor.netty</groupId>
+		    <artifactId>reactor-netty</artifactId>
+		    <version>0.8.11.RELEASE</version>
 		</dependency>
+
 		<dependency>
 			<groupId>org.webjars</groupId>
 			<artifactId>webjars-locator-core</artifactId>
