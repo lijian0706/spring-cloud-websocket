@@ -168,4 +168,4 @@ public void test(String username){
 ### 最后
 - 到此处为止，便实现了在多个实例下，向WebSocket发送消息的功能。
 - 源码地址：https://github.com/lijian0706/spring-cloud-websocket
-- 未经允许，请勿转载
+- 欢迎转载，转载请附上原文链接
